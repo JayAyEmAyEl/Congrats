@@ -3,17 +3,17 @@
 "KLOUD - LOVE ME feat Gabriel Paris.mp3",
 "The Weeknd - Coming Down.mp3",
 "GET YOU - DANIEL CAESAR FT KALI UCHIS.mp3",
-"Poison - Brent Faiyaz.mp3"
-"Bring Me The Horizon - Can You Feel My Heart.mp3"
-"The Weeknd - What You Need.mp3"
-"Sade - No Ordinary Love.mp3"
-"Sade - Hang On To Your Love.mp3"
-"Bring Me The Horizon  - Follow You.mp3"
-"Pink Pantheress - Break It Off.mp3"
-"Pinkpantheress  - Just for me.mp3"
-"Doja Cat - Woman.mp3"
-"Calvin Harris - How Deep Is Your Love.mp3"
-"SZA - Country.mp3"
-"SZA - Joni (Slowed)"
-"XMUGEN.mp3"
+"Poison - Brent Faiyaz.mp3",
+"Bring Me The Horizon - Can You Feel My Heart.mp3",
+"The Weeknd - What You Need.mp3",
+"Sade - No Ordinary Love.mp3",
+"Sade - Hang On To Your Love.mp3",
+"Bring Me The Horizon  - Follow You.mp3",
+"Pink Pantheress - Break It Off.mp3",
+"Pinkpantheress  - Just for me.mp3",
+"Doja Cat - Woman.mp3",
+"Calvin Harris - How Deep Is Your Love.mp3",
+"SZA - Country.mp3",
+"SZA - Joni (Slowed)",
+"XMUGEN.mp3",
 "Domal.mp3"

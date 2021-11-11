@@ -12,26 +12,28 @@ let currentFunnyIndex = 0;
 let playing = false;
 
 
-let songs = ["John Mayer - XO.mp3",
-"Disclosure - Latch.mp3",
+let songs = ["Matt Maltese - As the World Caves In.mp3",
+"HER - Best Part Audio ft Daniel Caesar.mp3",
+"KLOUD - LOVE ME feat Gabriel Paris.mp3",
+"The Weeknd - Coming Down.mp3",
+"GET YOU - DANIEL CAESAR FT KALI UCHIS.mp3",
+"Poison - Brent Faiyaz.mp3",
+"Bring Me The Horizon - Can You Feel My Heart.mp3",
+"The Weeknd - What You Need.mp3",
+"Sade - No Ordinary Love.mp3",
+"Sade - Hang On To Your Love.mp3",
+"Bring Me The Horizon  - Follow You.mp3",
+"Pink Pantheress - Break It Off.mp3",
+"Pinkpantheress  - Just for me.mp3",
+"Doja Cat - Woman.mp3",
 "Calvin Harris - How Deep Is Your Love.mp3",
-"Justin Bieber - Where Are You Now.mp3",
-"The Weeknd - Can't Feel My Face.mp3",
-"feel-my-face.mp3"];
+"SZA - Country.mp3",
+"SZA - Joni (Slowed)",
+"XMUGEN.mp3",
+"Domal.mp3"];
 
-let funnies = ["Muriel Gifford's Sea shells .aac",
-"belly scratches.aac",
-"circumcision.aac",
-"five for a sixer.aac",
-"flap flap bastards.aac",
-"freebacon! .aac",
-"ghosties down the u-bend.aac",
-"jackets and trouser legs.aac",
-"making a balls of the news.aac",
-"morning sitcom.aac",
-"nobody needs knickers! .aac",
-"one-armed man.aac",
-"satisfying piss.aac"]
+let funnies = ["sleepy baby.mp3",
+"That Bitch and her bottle.mp3"]
 
 
 $(document).ready(()=>{
@@ -54,7 +56,7 @@ function handleBold(el){
 function playSong(el){
 
 	currentMediaType = 'song'
-	console.log("Erin wants to play a song");
+	console.log("doğa wants to play a song");
 
 	handleBold(el)
 
@@ -72,7 +74,7 @@ function playSong(el){
 }
 
 function playFunnyTime(el){
-	console.log("erin wants to play a funny time");
+	console.log("doğa wants to play a funny time");
 
 	currentMediaType = "funny"
 
@@ -91,9 +93,9 @@ function playFunnyTime(el){
 }
 
 function freakout(el){
-	console.log("erin is freaking out");
+	console.log("doğa wants attention");
 	handleBold(el)
-	mediaType.text('Freakout engaged, Chris is being notified... hang tight, deep breaths!')
+	mediaType.text('Attention Engaged, Jamal is being notified... hang tight, deep breaths!')
 
 	player[0].pause()
 
@@ -105,7 +107,7 @@ function freakout(el){
 }
 
 function playPauseClicked(el){
-	console.log("erin pressed play/pause");
+	console.log("doğa pressed play/pause");
 	// console.log('el:', el);
 
 	// find icon that ISN'T hidden
@@ -114,7 +116,7 @@ function playPauseClicked(el){
 	// console.log("element clicked was:", clicked);
 
 	if (clicked === "play-icon") {
-		// Erin wants to play the media
+		// doğa  wants to play the media
 		player[0].play();
 
 		// show media-playing
@@ -135,7 +137,7 @@ function playPauseClicked(el){
 
 	} else {
 
-		// Erin is pausing
+		// doğa  is pausing
 		player[0].pause();
 
 		playing = false;
@@ -146,7 +148,7 @@ function playPauseClicked(el){
 }
 
 function nextClicked(){
-	console.log('erin clicked next');
+	console.log('doğa  clicked next');
 
 	if (currentMediaType === "song") {
 			// incrememnt currentSongIndex
@@ -169,7 +171,7 @@ function nextClicked(){
 }
 
 function prevClicked(){
-	console.log("Erin clicked previous")
+	console.log("doğa clicked previous")
 
 	if (currentMediaType === "song"){
 		currentSongIndex--;
@@ -211,9 +213,9 @@ function sendPush(){
 	let push = {
 		"active": "true",
 		"type": "note",
-		"title": "HELP",
-		"body": "Shit is hitting Erins fan!",
-		"email": "chrisdermody1@gmail.com"
+		"title": "URGENT!!!",
+		"body": "doğa needs attention",
+		"email": "jdassrath@gmail.com"
 	}
 
 	let headers = {
