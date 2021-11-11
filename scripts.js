@@ -8,32 +8,30 @@ let controls = $('#media-controls');
 let currentMediaType = "song";
 
 let currentSongIndex = 0;
-let currentFunIndex = 0;
+let currentFunnyIndex = 0;
 let playing = false;
 
 
-let songs = ["Matt Maltese - As the World Caves In.mp3",
-"HER - Best Part Audio ft Daniel Caesar.mp3",
-"KLOUD - LOVE ME feat Gabriel Paris.mp3",
-"The Weeknd - Coming Down.mp3",
-"GET YOU - DANIEL CAESAR FT KALI UCHIS.mp3",
-"Poison - Brent Faiyaz.mp3",
-"Bring Me The Horizon - Can You Feel My Heart.mp3",
-"The Weeknd - What You Need.mp3",
-"Sade - No Ordinary Love.mp3",
-"Sade - Hang On To Your Love.mp3",
-"Bring Me The Horizon  - Follow You.mp3",
-"Pink Pantheress - Break It Off.mp3",
-"Pinkpantheress  - Just for me.mp3",
-"Doja Cat - Woman.mp3",
+let songs = ["John Mayer - XO.mp3",
+"Disclosure - Latch.mp3",
 "Calvin Harris - How Deep Is Your Love.mp3",
-"SZA - Country.mp3",
-"SZA - Joni (Slowed)",
-"XMUGEN.mp3",
-"Domal.mp3"];
+"Justin Bieber - Where Are You Now.mp3",
+"The Weeknd - Can't Feel My Face.mp3",
+"feel-my-face.mp3"];
 
-let funs = ["sleepy baby.mp3",
-"That Bitch and her bottle.mp3"]
+let funnies = ["Muriel Gifford's Sea shells .aac",
+"belly scratches.aac",
+"circumcision.aac",
+"five for a sixer.aac",
+"flap flap bastards.aac",
+"freebacon! .aac",
+"ghosties down the u-bend.aac",
+"jackets and trouser legs.aac",
+"making a balls of the news.aac",
+"morning sitcom.aac",
+"nobody needs knickers! .aac",
+"one-armed man.aac",
+"satisfying piss.aac"]
 
 
 $(document).ready(()=>{
@@ -56,7 +54,7 @@ function handleBold(el){
 function playSong(el){
 
 	currentMediaType = 'song'
-	console.log("Doğa wants to play a song");
+	console.log("Erin wants to play a song");
 
 	handleBold(el)
 
@@ -73,29 +71,29 @@ function playSong(el){
 	controls.show();
 }
 
-function playFunTime(el){
-	console.log("Doğa wants to play a Fun time");
+function playFunnyTime(el){
+	console.log("erin wants to play a funny time");
 
-	currentMediaType = "fun"
+	currentMediaType = "funny"
 
 	handleBold(el)
 
 	controls.show()
 
-	mediaType.text('Fun Times...')
+	mediaType.text('Funny Times...')
 
-	nowPlaying.text(cleanName(funs[currentFunIndex]));
+	nowPlaying.text(cleanName(funnies[currentFunnyIndex]));
 
 	pausePlayer();
 
-	player.attr('src', "funtimes/"+funs[currentFunIndex]);
+	player.attr('src', "funnytimes/"+funnies[currentFunnyIndex]);
 	
 }
 
 function freakout(el){
-	console.log("Doğa wants attention");
+	console.log("erin is freaking out");
 	handleBold(el)
-	mediaType.text('Attention is on its way, Jamal is being notified... hang tight, deep breaths!')
+	mediaType.text('Freakout engaged, Chris is being notified... hang tight, deep breaths!')
 
 	player[0].pause()
 
@@ -107,7 +105,7 @@ function freakout(el){
 }
 
 function playPauseClicked(el){
-	console.log("Doğa pressed play/pause");
+	console.log("erin pressed play/pause");
 	// console.log('el:', el);
 
 	// find icon that ISN'T hidden
@@ -116,7 +114,7 @@ function playPauseClicked(el){
 	// console.log("element clicked was:", clicked);
 
 	if (clicked === "play-icon") {
-		// Doğa wants to play the media
+		// Erin wants to play the media
 		player[0].play();
 
 		// show media-playing
@@ -125,7 +123,7 @@ function playPauseClicked(el){
 		if (currentMediaType === "song") {
 			nowPlaying.text(cleanName(songs[currentSongIndex]))
 		} else {
-			nowPlaying.text(cleanName(funs[currentFunIndex]));
+			nowPlaying.text(cleanName(funnies[currentFunnyIndex]));
 		}
 		
 
@@ -137,7 +135,7 @@ function playPauseClicked(el){
 
 	} else {
 
-		// Doğa is pausing
+		// Erin is pausing
 		player[0].pause();
 
 		playing = false;
@@ -148,7 +146,7 @@ function playPauseClicked(el){
 }
 
 function nextClicked(){
-	console.log('Doğa clicked next');
+	console.log('erin clicked next');
 
 	if (currentMediaType === "song") {
 			// incrememnt currentSongIndex
@@ -157,10 +155,10 @@ function nextClicked(){
 			player.attr('src', "music/"+songs[currentSongIndex]);
 			nowPlaying.text(cleanName(songs[currentSongIndex]));
 		} else {
-			currentFunIndex++;
-			currentFunIndex > funs.length ? currentFunIndex = 0 : true;
-			player.attr('src', "funtimes/"+funs[currentFunIndex]);
-			nowPlaying.text(cleanName(funs[currentFunIndex]));
+			currentFunnyIndex++;
+			currentFunnyIndex > funnies.length ? currentFunnyIndex = 0 : true;
+			player.attr('src', "funnytimes/"+funnies[currentFunnyIndex]);
+			nowPlaying.text(cleanName(funnies[currentFunnyIndex]));
 		}
 
 	if (playing === true) {
@@ -171,7 +169,7 @@ function nextClicked(){
 }
 
 function prevClicked(){
-	console.log("Doğa clicked previous")
+	console.log("Erin clicked previous")
 
 	if (currentMediaType === "song"){
 		currentSongIndex--;
@@ -180,10 +178,10 @@ function prevClicked(){
 		player.attr('src', "music/"+songs[currentSongIndex]);
 		nowPlaying.text(cleanName(songs[currentSongIndex]));
 	} else {
-		currentFunIndex--;
-		currentFunIndex < 0 ? currentFunIndex = 0 : true;
-		player.attr('src', "funtimes/"+funs[currentFunIndex]);
-		nowPlaying.text(cleanName(funs[currentFunIndex]));
+		currentFunnyIndex--;
+		currentFunnyIndex < 0 ? currentFunnyIndex = 0 : true;
+		player.attr('src', "funnytimes/"+funnies[currentFunnyIndex]);
+		nowPlaying.text(cleanName(funnies[currentFunnyIndex]));
 	}
 	
 
@@ -213,9 +211,9 @@ function sendPush(){
 	let push = {
 		"active": "true",
 		"type": "note",
-		"title": "Urgent",
-		"body": "Doğas needs attention!",
-		"email": "jdassrath@gmail.com"
+		"title": "HELP",
+		"body": "Shit is hitting Erins fan!",
+		"email": "chrisdermody1@gmail.com"
 	}
 
 	let headers = {
@@ -225,8 +223,8 @@ function sendPush(){
 	         url: "https://api.pushbullet.com/v2/pushes",
 	         data: JSON.stringify(push),
 	         type: "POST",
-	         beforeSend: function(xhr){xhr.setRequestHeader('Access-Token', 'o.85hLDliV6pDxGYnf1ulO4546NoB4Iq4i').setRequestHeader('Content-Type','application/json');},
-	         success: function() { alert("I've been notified baby, will call as soon as I can! I love You :>"); }
+	         beforeSend: function(xhr){xhr.setRequestHeader('Access-Token', 'o.TWdGpN5eMfbFJ6aex5vjmgd9A2qsX6IT').setRequestHeader('Content-Type','application/json');},
+	         success: function() { alert("I've been notified darlin, will call as soon as I can! Kisses"); }
 	      });
 }
 
